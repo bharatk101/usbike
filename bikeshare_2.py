@@ -1,7 +1,6 @@
 import time
 import pandas as pd
 import numpy as np
-import turtle
 import datetime
 
 
@@ -262,35 +261,6 @@ def display_data(df):
             print('Sorry I didn\'t understand your input \nPlease Type "yes" or "no" \n')
 
 
-
-def draw():
-    """
-    Draws a smiley face when user doesn't want to restart the program
-    :return: nothing
-    """
-    smiles = turtle.Turtle()
-    smiles.penup()
-    smiles.goto(-60, 100)
-    smiles.pendown()
-    smiles.circle(7)  # eye one
-
-    smiles.penup()
-    smiles.goto(60, 100)
-    smiles.pendown()
-    smiles.circle(7)  # eye two
-
-    smiles.penup()
-    smiles.goto(0, 0)
-    smiles.pendown()
-    smiles.circle(90, 60)  # right smile
-
-    smiles.penup()
-    smiles.setheading(180)  # <-- look West
-    smiles.goto(0, 0)
-    smiles.pendown()
-    smiles.circle(-90, 60)
-
-
 def main():
     while True:
         city = get_city()
@@ -321,7 +291,6 @@ def main():
             print("Invalid input. Please type 'yes' or 'no'.")
             restart = input('\nWould you like to restart? Type "yes" or "no".\n')
         if restart.lower() != 'yes':
-            draw()
             print('Thank You')
             break
 
